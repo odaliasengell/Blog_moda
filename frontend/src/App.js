@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ArticleList from './components/ArticleList';
 import ArticleDetail from './components/ArticleDetail';
 
@@ -8,9 +8,14 @@ function App() {
     <Router>
       <div className="container">
         <header>
-          <h1>Blog de Moda</h1>
+          <h1>
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              ✨ Blog de Moda
+            </Link>
+          </h1>
           <nav>
-            <a href="/">Inicio</a>
+            <Link to="/">Inicio</Link>
+            <Link to="/categories">Categorías</Link>
           </nav>
         </header>
         
@@ -23,6 +28,7 @@ function App() {
         
         <footer>
           <p>© 2025 Blog de Moda. Todos los derechos reservados.</p>
+          <p>Creado con ❤️ para los amantes de la moda</p>
         </footer>
       </div>
     </Router>
