@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "blog-moda-fullstack",
   "version": "1.0.0",
   "description": "Blog de moda completo - Frontend y Backend",
@@ -15,12 +14,8 @@
   "devDependencies": {
     "concurrently": "^8.2.2"
   },
-  "keywords": [
-    "blog",
-    "moda",
-    "fashion",
-    "fullstack"
-  ],
+  "keywords": ["blog", "moda", "fashion", "fullstack"],
   "author": "Tu Nombre",
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": ["backend", "frontend"]
 }

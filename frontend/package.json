@@ -1,20 +1,38 @@
 {
-  "name": "blog-moda-fullstack",
+  "name": "blog-moda-frontend",
   "version": "1.0.0",
-  "description": "Blog de moda completo - Frontend y Backend",
+  "description": "Frontend para blog de moda",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
+    "axios": "^1.5.0",
+    "react-scripts": "5.0.1"
+  },
   "scripts": {
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "backend": "cd backend && npm run dev",
-    "frontend": "cd frontend && npm start",
-    "start": "cd backend && npm start",
-    "build": "cd frontend && npm run build",
-    "seed": "cd backend && node scripts/seed.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "keywords": ["blog", "moda", "fashion", "fullstack"],
-  "author": "Tu Nombre",
-  "license": "MIT"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000"
 }
