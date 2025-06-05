@@ -9,11 +9,18 @@ function App() {
       <div className="container">
         <header>
           <h1>Blog de Moda</h1>
+          <nav>
+            <a href="/">Inicio</a>
+          </nav>
         </header>
-        <Routes>
-          <Route path="/" element={<ArticleList />} />
-          <Route path="/articles/:id" element={<ArticleDetail />} />
-        </Routes>
+        
+        <main>
+          <Routes>
+            <Route path="/" element={<ArticleList />} />
+            <Route path="/articles/:slug" element={<ArticleDetail />} />
+          </Routes>
+        </main>
+        
         <footer>
           <p>© 2025 Blog de Moda. Todos los derechos reservados.</p>
         </footer>
